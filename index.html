@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link href="css/topapp.css" rel="stylesheet">
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <title>Top App Store Applications</title>
+</head>
+<body>
+	<div class="topapp-container" ng-app="topapp" ng-controller="topAppCtrl">
+		<div id="error-message" ng-if="errorMessage">
+			{{errorMessage}}
+		</div>
+		<table>
+			<tr>
+				<td ng-click="sort('trackName')">Name</td>
+				<td>Icon</td>
+				<td ng-click="sort('formattedPrice')">Price</td>
+				<td ng-click="sort('artistName')">Company/Author</td>
+				<td ng-click="sort('releaseDate')">Release Date</td>
+				<td ng-click="sort('averageUserRating')">Avarage User Rating</td>
+				<td ng-click="sort('userRatingCount')">Rating Count</td>
+			</tr>
+			<tr ng-repeat="ios_app in topApps" ng-click="viewApp(ios_app)">
+				<td>{{ios_app.trackName}}</td>
+				<td>
+					<img class="thumb" ng-src="{{ios_app.artworkUrl60}}">
+				</td>
+				<td>{{ios_app.formattedPrice}}</td>
+				<td>{{ios_app.artistName}}</td>
+				<td>{{ios_app.releaseDate}}</td>
+				<td>{{ios_app.averageUserRating}}</td>
+				<td>{{ios_app.userRatingCount}}</td>
+			</tr>
+		</table>
+	</div>
+	<script src="js/topapp.js"></script>
+</body>
+</html>
