@@ -1,40 +1,30 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
 <head>
-	<meta charset="UTF-8">
-	<link href="css/topapp.css" rel="stylesheet">
-	<script src="bower_components/angular/angular.min.js"></script>
-	<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-    <title>Top App Store Applications</title>
+    <title>Bicycles are the best thing in the world | Intro</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div class="topapp-container" ng-app="topapp" ng-controller="topAppCtrl">
-		<div id="error-message" ng-if="errorMessage">
-			{{errorMessage}}
-		</div>
-		<table>
-			<tr>
-				<td ng-click="sort('trackName')">Name</td>
-				<td>Icon</td>
-				<td ng-click="sort('formattedPrice')">Price</td>
-				<td ng-click="sort('artistName')">Company/Author</td>
-				<td ng-click="sort('releaseDate')">Release Date</td>
-				<td ng-click="sort('averageUserRating')">Avarage User Rating</td>
-				<td ng-click="sort('userRatingCount')">Rating Count</td>
-			</tr>
-			<tr ng-repeat="ios_app in topApps" ng-click="viewApp(ios_app)">
-				<td>{{ios_app.trackName}}</td>
-				<td>
-					<img class="thumb" ng-src="{{ios_app.artworkUrl60}}">
-				</td>
-				<td>{{ios_app.formattedPrice}}</td>
-				<td>{{ios_app.artistName}}</td>
-				<td>{{ios_app.releaseDate}}</td>
-				<td>{{ios_app.averageUserRating}}</td>
-				<td>{{ios_app.userRatingCount}}</td>
-			</tr>
-		</table>
-	</div>
-	<script src="js/topapp.js"></script>
+    <main>
+        <div class="container">
+            <center>
+                <h1>Bicycles Are The Best Thing In The World!</h1>
+                <p class="lead">
+                    <img src="img/eden.jpg" height="500px">
+                    <img src="img/shai.jpg" height="500px">
+                    <img src="img/dimi.jpg" height="500px">
+                </p>
+                <p class="lead">
+                    <img src="img/larry2.jpg" height="500px">
+                    <img src="img/danny_and_shai.jpg" height="500px">
+                </p>
+                <div>
+                    <a href="page1.html">Why tho?</a>
+                </div>
+            </center>
+        </div>
+    </main>
 </body>
-</html>
