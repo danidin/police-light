@@ -12,13 +12,13 @@ registerApplication(
   // loadingFunction
   () => import('./src/intro/intro.app.js'),
   // activityFunction
-  (location) => location.pathname === "" || location.pathname === "/"
+  (location) => location.hash === ''
 );
 
 registerApplication(
-  '1',
+  'page1',
   () => import('./src/1/1.app.js'),
-  pathPrefix('/1')
+  (location) => location.hash === '#/page1'
 );
 
 start();
