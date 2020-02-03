@@ -15,6 +15,7 @@
     "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
+    "bike-app": "github:danidin/bike-app#master",
     "single-spa": "^4.0.1"
   },
   "scripts": {

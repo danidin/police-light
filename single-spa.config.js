@@ -7,18 +7,9 @@ function pathPrefix(prefix) {
 }
 
 registerApplication(
-  // Name of our single-spa application
-  'intro',
-  // loadingFunction
-  () => import('./src/intro/intro.app.js'),
-  // activityFunction
-  (location) => location.hash === ''
-);
-
-registerApplication(
-  'page1',
-  () => import('./src/1/1.app.js'),
-  (location) => location.hash === '#/page1'
+  'bike-app',
+  () => import('bike-app'),
+  (location) => pathPrefix('/bike-app')
 );
 
 start();
